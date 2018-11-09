@@ -60,3 +60,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'themoviedb', '~> 1.0', '>= 1.0.1'
+gem 'dotenv', '~> 2.5'
+gem 'httparty', '~> 0.16.2'
+gem 'nokogiri', '~> 1.8', '>= 1.8.5'
+
