@@ -1,0 +1,29 @@
+<% if @movie_request != nil %>
+
+	<table class ='table mx-auto'>
+		<thead>
+			<th scope="col" class='text-nowrap'>Movie name</th>
+			<th scope="col" class='text-center text-nowrap'>Release date</th>
+			<th scope="col" class='text-center text-nowrap'>Director</th>
+			<th scope="col" class='text-nowrap text-center'>Poster</th>
+			<th class=''></th>
+		</thead>
+		<tbody>
+			<% @results.each do |movie| %>
+			<tr>
+				<th scope='row' class='text-nowrap'><%= movie[:title] %></th>
+				<td class='text-center text-nowrap'><%= movie[:release] %></td>
+				<td class='text-center text-nowrap'><%= movie[:director] %></td>
+				<td class='text-center'><img src=<%= movie[:poster] %> alt=<%= movie[:title] %> width=30% ></td>
+				<td class='text-center'><h5><a href = <%= movie[:url] %> ><i class='fas fa-search-plus'></i></a></h5></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+<% else %>
+	<div class='text-center'>
+		<h3 class=offset-4><i class="fas fa-hand-point-up"></i></h3>
+		<h3>Lancez votre première recherche de film</h3>
+	</div>
+<% end %>

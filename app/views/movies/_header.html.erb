@@ -1,0 +1,14 @@
+<div class="navbar-fixed-top navbar-expand-lg navbar-light bg-light">
+  	<nav class="navbar container">
+      	<%= link_to 'MovieSearcher', root_path, class:"navbar-brand" %>
+
+      	<div class='text-right my-auto ml-auto'>
+			<%= form_for :movie, method: 'patch', url: {action: 'update'}, class:'text-right' do |f| %>
+			 <div class="form-inline text-right">
+	  			<%= f.text_field :request, placeholder: 'Movie Name', :required => 'required', class:"form-control form-inline mr-2" %>
+	  			<%= f.submit 'Search', class: 'form-group btn btn-info'%>
+	  		</div>
+	  		<% end %>
+		</div>
+    </nav>
+</div>
